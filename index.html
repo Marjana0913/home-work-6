@@ -4,44 +4,88 @@
   <meta charset="UTF-8">
   <title>Mondrian Table</title>
   <style>
+    /* Table rows heights */
+.r1 { height: 120px; }
+.r2 { height: 260px; }
+.r3 { height: 160px; }
+.r4 { height: 160px; }
+
     table {
-      border-collapse: collapse;
-      width: 600px;
-      height: 600px;
-      margin: 40px auto;
-    }
+  border-collapse: collapse;
+  width: 600px;
+  height: 600px;
+}
 
-    td {
-      border: 8px solid black;
-    }
+/* Column widths */
+col.c1 { width: 200px; }
+col.c2 { width: 200px; }
+col.c3 { width: 100px; }
+col.c4 { width: 100px; }
 
-    .red { background: red; }
-    .yellow { background: yellow; }
-    .blue { background: blue; }
-    .black { background: black; }
-    .white { background: white; }
+/* Row heights */
+tr.r1 { height: 150px; }
+tr.r2 { height: 150px; }
+tr.r3 { height: 150px; }
+tr.r4 { height: 150px; }
+
+td {
+  border: 10px solid black; /* Thick Mondrian lines */
+}
+
+tr {
+  height: 150px;
+}
+
+tr:nth-child(1) { height: 120px; }
+tr:nth-child(2) { height: 260px; }
+tr:nth-child(3) { height: 160px; }
+tr:nth-child(4) { height: 140px; }
+
+/* Colors */
+.red    { background: red; }
+.yellow { background: yellow; }
+.blue   { background: blue; }
+.black  { background: black; }
+.white  { background: white; }
+
   </style>
 </head>
 <body>
 <table>
+  <colgroup>
+    <col style="width: 20%;">
+    <col style="width: 35%;">
+    <col style="width: 25%;">
+    <col style="width: 20%;">
+  </colgroup>
+
+  <!-- Row 1 -->
   <tr>
-    <td colspan="2" class="white"></td>
+    <td class="white"></td>
+    <td class="white" colspan="2"></td>
     <td class="yellow"></td>
   </tr>
 
+  <!-- Row 2 -->
   <tr>
-    <td rowspan="2" class="red"></td>
-    <td class="white"></td>
+    <td class="white" rowspan="2"></td>
+    <td class="red" colspan="2" rowspan="2"></td>
     <td class="white"></td>
   </tr>
 
+  <!-- Row 3 -->
   <tr>
-    <td class="black"></td>
     <td class="blue"></td>
   </tr>
+
+  <!-- Row 4 -->
+  <tr>
+    <td class="white"></td>
+    <td class="white"></td>
+    <td class="white"></td>
+    <td class="black"></td>
+  </tr>
 </table>
-
-
 
 </body>
 </html>
