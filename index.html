@@ -8,6 +8,7 @@
       border-collapse: collapse;
       width: 600px;
       height: 600px;
+      margin: 40px auto;
     }
 
     td {
@@ -22,6 +23,32 @@
   </style>
 </head>
 <body>
+<table>
+
+  <colgroup>
+    <col style="width: 40%;">
+    <col style="width: 35%;">
+    <col style="width: 25%;">
+  </colgroup>
+
+  <tr>
+    <td class="white" colspan="2"></td>
+    <td class="yellow"></td>
+  </tr>
+
+  <tr>
+    <td class="red" rowspan="2"></td>
+    <td class="white"></td>
+    <td class="white"></td>
+  </tr>
+
+  <tr>
+    <td class="black"></td>
+    <td class="blue"></td>
+  </tr>
+
+</table>
+
 
 </body>
 </html>
