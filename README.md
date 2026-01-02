@@ -1,11 +1,9 @@
-# Homework 6
+# Homework 6: Mondrian Table
 
-Mondrian-style table layout created with HTML table elements.
+This project is created as part of Homework 6.
 
-## Description
-This project reproduces a layout inspired by Piet Mondrian paintings using an HTML table.
-The layout is built with a minimal number of rows and columns and uses cell merging
-to achieve the visual structure.
+The task was to build an HTML table inspired by Piet Mondrian's painting style.
+The layout uses merged table cells, bold black lines, and primary colors.
 
 ## Technologies
 - HTML
