@@ -1,91 +1,100 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mondrian Table</title>
-  <style>
-    /* Table rows heights */
-.r1 { height: 120px; }
-.r2 { height: 260px; }
-.r3 { height: 160px; }
-.r4 { height: 160px; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
 
-    table {
-  border-collapse: collapse;
-  width: 600px;
-  height: 600px;
-}
+    <style>
+        .red {
+            background-color: red;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .blue {
+            background-color: blue;
+            color: white;
+        }
+        .black {
+            background-color: black;
+            color: white;
+        }
+        .white {
+            background-color: white;
+        }
 
-/* Column widths */
-col.c1 { width: 200px; }
-col.c2 { width: 200px; }
-col.c3 { width: 100px; }
-col.c4 { width: 100px; }
+        body {
+            margin: 0;
+        }
 
-/* Row heights */
-tr.r1 { height: 150px; }
-tr.r2 { height: 150px; }
-tr.r3 { height: 150px; }
-tr.r4 { height: 150px; }
+        table {
+            width: 100vw;
+            aspect-ratio: 1 / 1;
+        }
+        table, 
+        table, 
+        td {
+            border-collapse: collapse;
+            border: 3px solid black;
+        }
 
-td {
-  border: 10px solid black; /* Thick Mondrian lines */
-}
+        td {
+            height: 50px;
+            font-size: 24px;
+            text-align: center;
+            vertical-align: middle;
+            width: 10px;
+            min-width: 50px;
+        }
 
-tr {
-  height: 150px;
-}
+        td:nth-child(4) {
+            min-width: 5%;
+        }
+        td:nth-child(3),
+        td:nth-child(2) {
+            width: 23%;
+        }
 
-tr:nth-child(1) { height: 120px; }
-tr:nth-child(2) { height: 260px; }
-tr:nth-child(3) { height: 160px; }
-tr:nth-child(4) { height: 140px; }
-
-/* Colors */
-.red    { background: red; }
-.yellow { background: yellow; }
-.blue   { background: blue; }
-.black  { background: black; }
-.white  { background: white; }
-
-  </style>
+    </style>
 </head>
 <body>
-<table>
-  <colgroup>
-    <col style="width: 20%;">
-    <col style="width: 35%;">
-    <col style="width: 25%;">
-    <col style="width: 20%;">
-  </colgroup>
-
-  <!-- Row 1 -->
-  <tr>
-    <td class="white"></td>
-    <td class="white" colspan="2"></td>
-    <td class="yellow"></td>
-  </tr>
-
-  <!-- Row 2 -->
-  <tr>
-    <td class="white" rowspan="2"></td>
-    <td class="red" colspan="2" rowspan="2"></td>
-    <td class="white"></td>
-  </tr>
-
-  <!-- Row 3 -->
-  <tr>
-    <td class="blue"></td>
-  </tr>
-
-  <!-- Row 4 -->
-  <tr>
-    <td class="white"></td>
-    <td class="white"></td>
-    <td class="white"></td>
-    <td class="black"></td>
-  </tr>
-</table>
+    <table>
+        <tr>
+            <td class="white" colspan="2"></td>
+            <td class="white" colspan="2"></td>
+            <td class="yellow" colspan="2"></td>
+            <td rowspan="4" class="white"></td>
+        </tr>
+        <tr>
+            <td class="white"></td>
+            <td class="red" colspan="3" rowspan="2"></td>
+            <td class="yellow" colspan="2"></td>
+        </tr>
+        <tr>
+            <td class="white" rowspan="2"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+        </tr>
+        <tr>
+            <td class="black" rowspan="2" colspan="2"></td>
+            <td class="white"></td>
+            <td class="white" colspan="2"></td>
+        </tr>
+        <tr>
+            <td class="yellow" rowspan="3"></td>
+            <td class="white"></td>
+            <td class="blue" colspan="2" rowspan="2"></td>
+            <td class="red" rowspan="3"></td>
+        </tr>
+        <tr>
+            <td class="white" colspan="2" rowspan="2"></td>
+            <td class="black"></td>
+        </tr>
+        <tr>
+            <td class="white" colspan="3"></td>
+        </tr>
+    </table>
 
 </body>
 </html>
